@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:ital,wght@0,600;0,700;1,700&display=swap');
+
+
+
+@theme {
+    --font-sans: "Barlow", sans-serif;
+    --font-display: "Barlow Condensed", sans-serif;
+}
+h1, h2 { font-family: var(--font-display); }
+
+.scroll-fade{
+    animation: scrollFade linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 100%;
+}
+
+@keyframes scrollFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
