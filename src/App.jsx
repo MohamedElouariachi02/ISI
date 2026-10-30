@@ -7,6 +7,7 @@ import { PiMathOperationsBold } from "react-icons/pi";
 import { FaCheck } from "react-icons/fa";
 import { FaPaintRoller } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 
 
 const servicios = [
@@ -195,14 +196,30 @@ function Elegirnos(){
 
 function App() {
     const [servicioActual, setServicioActual] = useState(0);
-    const [avisoLegalView, setAvisoLegalView] = useState(true);
+    const [avisoLegalView, setAvisoLegalView] = useState(false);
     return (
     <>
         {avisoLegalView && (
             <div className={"fixed flex justify-center items-center inset-0 z-50"}>
-                <button className={"bg-black/30 fixed inset-0 z-40"} onClick={() => setAvisoLegalView(false)}></button>
-                <div className={"bg-white z-100 top-0 left-0 w-[90%] h-[90%]"}>
+                <button className={"bg-black/70 fixed inset-0 z-40"} onClick={() => setAvisoLegalView(false)}></button>
+                <div className={"bg-white z-100 w-[80%] max-h-[90%] relative rounded-2xl flex flex-col overflow-hidden pr-4 pb-4"}>
+                    <div className={"relative px-5 pt-4"}>
+                        <button className={"absolute right-0"}
+                                onClick={() => setAvisoLegalView(false)}>
+                            < IoClose className={"size-10 hover:fill-red-500 duration-300 transition"}/>
+                        </button>
+                        <h1 className={"text-4xl text-start lg:text-center font-bold text-marron "}>Aviso Legal</h1>
+                    </div>
 
+                    <div className={"ml-5 mt-4 flex flex-col items-start gap-y-10 wrap-anywhere overflow-y-auto"}>
+                        <p className={"text-lg lg:text-xl lg:max-w-350"}>Resolución de litigios en línea conforme al Art. 14.1 del Reglamento (UE) 524/2013:
+                            La Comisión Europea facilita una plataforma de resolución de litigios en línea, la cual se encuentra disponible
+                            en el siguiente enlace: <a className={"text-marron underline "} href={"https://ec.europa.eu/consumers/odr/."} target={"_blank"}>https://ec.europa.eu/consumers/odr/.</a></p>
+                        <p className={"text-lg lg:text-2xl"}><span className={"font-bold"}>Titular: </span>Airam Ramón del Rosario Rodríguez</p>
+                        <p className={"text-lg lg:text-2xl"}><span className={"font-bold"}>Dirección: </span>C/Tahona Nº2 Arguineguin, Mogán 35120, Las Palmas</p>
+                        <p className={"text-lg lg:text-2xl"}><span className={"font-bold"}>Correo elecrtronico: </span>Delrosariorodriguezairam@gmail.com </p>
+                        <p className={"text-lg lg:text-2xl"}><span className={"font-bold"}>Contacto: </span>+34 676 055 670</p>
+                    </div>
                 </div>
             </div>
 
