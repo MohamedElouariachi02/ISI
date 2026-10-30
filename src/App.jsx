@@ -48,7 +48,7 @@ function ServiciosView({servicioActual, setServicioActual})
     return (
         <section className="flex flex-col mt-4 items-center lg:h-screen pb-4">
             <h1 className="text-3xl font-bold text-left ml-4 mb-2 lg:text-6xl">Nuestros servicios</h1>
-            <hr className="h-1 w-85 lg:w-300 bg-marron mb-10 mt-3 mx-auto"/>
+            <div className="h-1 w-70 lg:w-150 bg-marron mx-auto lg:mt-5 lg:mb-10 mb-4"></div>
             < ServiciosViewTarjetas />
             < ServiciosViewCarrusel servicioActual={servicioActual} setServicioActual={setServicioActual} />
         </section>
@@ -117,8 +117,8 @@ function Inicio(){
                 <h1 className="text-3xl font-bold lg:text-7xl max-w-80 lg:max-w-220">¿Cuánto costaría la reforma que tienes en mente?</h1>
                 <h2 className="text-2xl lg:text-5xl max-w-80 lg:max-w-150">En ISI te ayudamos a valorar tu proyecto. Solicita tu presupuesto gratis y sin compromiso.</h2>
                 <div className="flex justify-center gap-x-8 mx-5 lg:gap-x-60 lg:mt-10">
-                    <button className="p-3 hover:bg-white/80 transition duration-500 ease-in-out hover:text-marron bg-marron lg:rounded-4xl rounded-2xl text-white font-bold outline-2 outline-black hover:text-shadow hover:shadow-xl lg:text-4xl lg:p-5"
-                            onClick={() => {window.location.href = "tel:+34676055670"}}>Quiero mi <br/>presupuesto</button>
+                    <a href={"tel:+34676055670"} className="p-3 hover:bg-white/80 transition duration-500 ease-in-out hover:text-marron bg-marron lg:rounded-4xl rounded-2xl text-white font-bold outline-2 outline-black hover:text-shadow hover:shadow-xl lg:text-4xl lg:p-5"
+                            >Quiero mi <br/>presupuesto</a>
                 </div>
             </div>
         </section>
@@ -138,7 +138,7 @@ function Nosotros(){
 }
 function Elegirnos(){
     return (
-        <section className="mt-4 lg:h-screen bg-marron text-white lg:pt-10 py-4">
+        <section className="mt-4 lg:min-h-screen bg-marron text-white lg:pt-10 py-4">
             <h1 className="text-3xl font-bold text-center lg:text-6xl">¿Por qué elegirnos?</h1>
             <div className="h-1 w-80 lg:w-175 bg-white mx-auto lg:mt-5"></div>
             <div className="lg:flex lg:gap-x-10 lg:justify-center">
@@ -187,9 +187,8 @@ function Elegirnos(){
                 </div>
             </div>
 
-            <button className="bg-white lg:rounded-4xl font-bold rounded-2xl p-4 flex mx-auto mt-4 text-4xl text-marron lg:p-6 lg:text-6xl hover:-translate-y-5 hover:translate-x-5 transition duration-300 ease-in-out hover:shadow-2xl hover:shadow-white/60"
-            onClick={() => window.location.href = "tel:+34676055670"}>Empieza ya</button>
-
+            <a href={"tel:+34676055670"} className="bg-white max-w-60 lg:max-w-95 text-center lg:rounded-4xl font-bold rounded-2xl p-4 flex mx-auto mt-4 text-4xl text-marron lg:p-6 lg:text-6xl hover:-translate-y-5 hover:translate-x-5 transition duration-300 ease-in-out hover:shadow-2xl hover:shadow-white/60"
+            >Empieza ya</a>
         </section>
     )
 }
