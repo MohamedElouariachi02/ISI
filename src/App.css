@@ -4,18 +4,3 @@
 @theme {
     --color-marron: #673a17;
 }
-
-.scroll-fade{
-    animation: scrollFade linear both;
-    animation-timeline: view();
-    animation-range: entry 0% entry 100%;
-}
-
-@keyframes scrollFade {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
