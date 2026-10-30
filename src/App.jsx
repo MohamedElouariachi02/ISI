@@ -144,16 +144,16 @@ function Elegirnos(){
             <div className="lg:flex lg:gap-x-10 lg:justify-center">
                 <div className="flex justify-center my-auto ml-4">
                     <ul className="list-inside text-lg mt-4 lg:text-4xl lg:ml-5 lg:mt-10 lg:grid lg:grid-cols-2 lg:grid-rows-2 ">
-                        <li className="lg:max-w-130 lg:border-b lg:border-r lg:p-4">
+                        <li className="lg:max-w-130 border-b lg:border-b lg:border-r lg:p-4">
                             <p className="font-bold">Presupuesto sin compromiso</p>
                             <p className="text-sm mx-6 mb-2 lg:text-3xl lg:mb-20 wrap-anywhere">Nos cuentas qué necesitas, lo vemos contigo y te damos un precio claro. Si no te encaja, no pasa nada.</p>
                         </li>
 
-                        <li className={"lg:max-w-130 lg:border-b lg:border-l lg:p-4"}>
+                        <li className={"lg:max-w-130 border-b lg:border-b lg:border-l lg:p-4"}>
                             <p className="font-bold">Trato directo y cercano</p>
                             <p className="text-sm mx-6 mb-2 lg:text-3xl lg:mb-20 wrap-anywhere">Hablas con las personas que van a hacer el trabajo, sin intermediarios ni vueltas. Te explicamos todo con palabras normales.</p>
                         </li>
-                        <li className={"lg:max-w-130 lg:border-t lg:border-r lg:p-4"}>
+                        <li className={"lg:max-w-130 border-b lg:border-b-0 lg:border-t lg:border-r lg:p-4"}>
                             <p className="font-bold">Trabajo bien hecho y con garantía</p>
                             <p className="text-sm mx-6 mb-2 lg:text-3xl lg:mb-20 wrap-anywhere">Cuidamos cada detalle y respondemos por lo que hacemos. Si algo no queda como debe, lo arreglamos.</p>
                         </li>
@@ -193,54 +193,60 @@ function Elegirnos(){
     )
 }
 
+function AvisoLegal({setAvisoLegalView}){
+    return (
+        <div className={"fixed flex justify-center items-center inset-0 z-50"}>
+            <button className={"bg-black/70 fixed inset-0 z-40"} onClick={() => setAvisoLegalView(false)}></button>
+            <div className={"bg-white z-100 w-[80%] max-h-[90%] relative rounded-2xl flex flex-col overflow-hidden pr-4 pb-4"}>
+                <div className={"relative px-5 pt-4"}>
+                    <button className={"absolute right-0"}
+                            onClick={() => setAvisoLegalView(false)}>
+                        < IoClose className={"size-10 hover:fill-red-500 duration-300 transition"}/>
+                    </button>
+                    <h1 className={"text-4xl text-start lg:text-center font-bold text-marron lg:text-6xl"}>Aviso Legal</h1>
+                </div>
+
+                <div className={"ml-5 mt-4 flex flex-col items-start gap-y-10 wrap-anywhere overflow-y-auto scrollbar-none"}>
+                    <h2 className={"text-lg lg:text-4xl font-bold"}>Datos identificativos (art. 10 Ley 34/2002, LSSI-CE)</h2>
+                    <p className={"text-lg lg:text-2xl"}><span className={"font-bold"}>Titular: </span>Airam Ramón del Rosario Rodríguez</p>
+                    <p className={"text-lg lg:text-2xl"}><span className={"font-bold"}>NIF: </span>42254405R</p>
+                    <p className={"text-lg lg:text-2xl"}><span className={"font-bold"}>Dirección: </span>C/Tahona Nº2 Arguineguin, Mogán 35120, Las Palmas</p>
+                    <p className={"text-lg lg:text-2xl"}><span className={"font-bold"}>Correo electronico: </span>isibusinesscontact@gmail.com</p>
+                    <p className={"text-lg lg:text-2xl"}><span className={"font-bold"}>Contacto: </span>+34 676 055 670</p>
+                    <hr className={"w-full"}/>
+                    <div className={"text-lg flex flex-col gap-y-2 lg:text-2xl"}>
+                        <h3 className={"font-bold"}>Objeto</h3>
+                        <p>Esta web tiene carácter informativo y publicitario sobre los servicios de pintura, reformas y otros trabajos ofrecidos por el titular.
+                            La contratación de los servicios, los presupuestos y los pagos se realizan fuera de este sitio web, por contacto directo.</p>
+                    </div>
+                    <div className={"text-lg flex flex-col gap-y-2 lg:text-2xl"}>
+                        <h3 className={"font-bold"}>Propiedad intelectual</h3>
+                        <p>Los textos, imágenes, logotipos y demás contenidos de la web son titularidad de su propietario o se usan con la debida autorización.
+                            Queda prohibida su reproducción total o parcial sin consentimiento expreso.</p>
+                    </div>
+                    <div className={"text-lg flex flex-col gap-y-2 lg:text-2xl"}>
+                        <h3 className={"font-bold"}>Responsabilidad</h3>
+                        <p>El titular procura que la información sea correcta y actual, pero no garantiza la ausencia de errores.
+                            Los presupuestos y condiciones concretas son los comunicados por escrito al cliente en cada caso.</p>
+                    </div>
+                    <div className={"text-lg flex flex-col gap-y-2 lg:text-2xl"}>
+                        <h3 className={"font-bold"}>Legislación aplicable</h3>
+                        <p>Este aviso se rige por la legislación española. Para cualquier controversia,
+                            serán competentes los juzgados y tribunales que correspondan conforme a la normativa vigente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 function App() {
     const [servicioActual, setServicioActual] = useState(0);
     const [avisoLegalView, setAvisoLegalView] = useState(false);
     return (
     <>
         {avisoLegalView && (
-            <div className={"fixed flex justify-center items-center inset-0 z-50"}>
-                <button className={"bg-black/70 fixed inset-0 z-40"} onClick={() => setAvisoLegalView(false)}></button>
-                <div className={"bg-white z-100 w-[80%] max-h-[90%] relative rounded-2xl flex flex-col overflow-hidden pr-4 pb-4"}>
-                    <div className={"relative px-5 pt-4"}>
-                        <button className={"absolute right-0"}
-                                onClick={() => setAvisoLegalView(false)}>
-                            < IoClose className={"size-10 hover:fill-red-500 duration-300 transition"}/>
-                        </button>
-                        <h1 className={"text-4xl text-start lg:text-center font-bold text-marron lg:text-6xl"}>Aviso Legal</h1>
-                    </div>
-
-                    <div className={"ml-5 mt-4 flex flex-col items-start gap-y-10 wrap-anywhere overflow-y-auto scrollbar-none"}>
-                        <h2 className={"text-lg lg:text-4xl font-bold"}>Datos identificativos (art. 10 Ley 34/2002, LSSI-CE)</h2>
-                        <p className={"text-lg lg:text-2xl"}><span className={"font-bold"}>Titular: </span>Airam Ramón del Rosario Rodríguez</p>
-                        <p className={"text-lg lg:text-2xl"}><span className={"font-bold"}>NIF: </span>42254405R</p>
-                        <p className={"text-lg lg:text-2xl"}><span className={"font-bold"}>Dirección: </span>C/Tahona Nº2 Arguineguin, Mogán 35120, Las Palmas</p>
-                        <p className={"text-lg lg:text-2xl"}><span className={"font-bold"}>Correo electronico: </span>isibusinesscontact@gmail.com</p>
-                        <p className={"text-lg lg:text-2xl"}><span className={"font-bold"}>Contacto: </span>+34 676 055 670</p>
-                        <hr className={"w-full"}/>
-                        <div className={"text-lg flex flex-col gap-y-2 lg:text-2xl"}>
-                            <h3 className={"font-bold"}>Objeto</h3>
-                            <p>Esta web tiene carácter informativo y publicitario sobre los servicios de pintura, reformas y otros trabajos ofrecidos por el titular.
-                                La contratación de los servicios, los presupuestos y los pagos se realizan fuera de este sitio web, por contacto directo.</p>
-                        </div>
-                        <div className={"text-lg flex flex-col gap-y-2 lg:text-2xl"}>
-                            <h3 className={"font-bold"}>Propiedad intelectual</h3>
-                            <p>Los textos, imágenes, logotipos y demás contenidos de la web son titularidad de su propietario o se usan con la debida autorización.
-                                Queda prohibida su reproducción total o parcial sin consentimiento expreso.</p>
-                        </div>
-                        <div className={"text-lg flex flex-col gap-y-2 lg:text-2xl"}>
-                            <h3 className={"font-bold"}>Responsabilidad</h3>
-                            <p>El titular procura que la información sea correcta y actual, pero no garantiza la ausencia de errores.
-                                Los presupuestos y condiciones concretas son los comunicados por escrito al cliente en cada caso.</p>
-                        </div>
-                        <div className={"text-lg flex flex-col gap-y-2 lg:text-2xl"}>
-                            <h3 className={"font-bold"}>Legislación aplicable</h3>
-                            <p>Este aviso se rige por la legislación española. Para cualquier controversia,
-                                serán competentes los juzgados y tribunales que correspondan conforme a la normativa vigente.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <AvisoLegal setAvisoLegalView={setAvisoLegalView} />
 
         )}
         <Header />
