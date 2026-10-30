@@ -11,9 +11,9 @@ function Footer({avisoLegal}) {
                 <p className="text-white font-bold text-xl text-left lg:text-5xl">Intermediario de <br/>servicios integrales</p>
             </div>
             <div className="ml-4 mt-4 lg:text-2xl lg:ml-15">
-                <p className="font-bold lg:text-4xl mb-3 lg:mb-10">Contactanos</p>
+                <p className="font-bold lg:text-4xl mb-3 lg:mb-10">Contáctanos</p>
                 <div className="ml-4 lg:ml-10">
-                    <a href={"mailto:isibusiness@gmail.com"} className="flex items-center gap-x-2 lg:gap-x-4 hover:text-white/60"><HiMail/>isibusinesscontact@gmail.com</a>
+                    <a href={"mailto:isibusinesscontact@gmail.com"} className="flex items-center gap-x-2 lg:gap-x-4 hover:text-white/60"><HiMail/>isibusinesscontact@gmail.com</a>
                     <p className="mt-2 lg:mt-4">Airam del Rosario</p>
                     <a href={"tel:+34676055670"} className="flex items-center gap-x-2 lg:gap-x-4 hover:text-white/60"><BsFillTelephoneFill/>+34 676 055 670</a>
                     <p className="mt-2 lg:mt-4">Ulises Cabrera</p>

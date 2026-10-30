@@ -165,23 +165,23 @@ function Elegirnos(){
                 </div>
 
                 <div className="flex flex-col items-center justify-center">
-                    <h2 className="text-2xl font-bold text-center mt-4 lg:text-4xl lg:mb-10">Como trabajamos</h2>
+                    <h2 className="text-2xl font-bold text-center mt-4 lg:text-4xl lg:mb-10">Cómo trabajamos</h2>
                     <div className="flex flex-col text-lg mt-4 mx-4 gap-y-4 lg:text-3xl lg:justify-center lg:items-center">
                         <div className="flex flex-col items-center lg:items-start">
                             <GiTeamIdea className="size-15 lg:size-25 lg:mx-auto fill-white"/>
-                            <p className="">1.Hablamos de tu idea</p>
+                            <p className="">1. Hablamos de tu idea</p>
                         </div>
                         <div className="flex flex-col items-center lg:items-start">
                             <PiMathOperationsBold className="size-15 lg:size-25 lg:mx-auto fill-white"/>
-                            <p className="">2.Te hacemos el presupuesto</p>
+                            <p className="">2. Te hacemos el presupuesto</p>
                         </div>
                         <div className="flex flex-col items-center lg:items-start">
                             <FaPaintRoller className="size-15 lg:size-25 lg:mx-auto fill-white"/>
-                            <p className="">3.Nos ponemos manos a la obra</p>
+                            <p className="">3. Nos ponemos manos a la obra</p>
                         </div>
                         <div className="flex flex-col items-center lg:items-start">
                             <FaCheck className="size-15 lg:size-25 lg:mx-auto fill-white"/>
-                            <p className="">4.Entrega y garantía</p>
+                            <p className="">4. Entrega y garantía</p>
                         </div>
                     </div>
                 </div>
@@ -208,17 +208,37 @@ function App() {
                                 onClick={() => setAvisoLegalView(false)}>
                             < IoClose className={"size-10 hover:fill-red-500 duration-300 transition"}/>
                         </button>
-                        <h1 className={"text-4xl text-start lg:text-center font-bold text-marron "}>Aviso Legal</h1>
+                        <h1 className={"text-4xl text-start lg:text-center font-bold text-marron lg:text-6xl"}>Aviso Legal</h1>
                     </div>
 
-                    <div className={"ml-5 mt-4 flex flex-col items-start gap-y-10 wrap-anywhere overflow-y-auto"}>
-                        <p className={"text-lg lg:text-xl lg:max-w-350"}>Resolución de litigios en línea conforme al Art. 14.1 del Reglamento (UE) 524/2013:
-                            La Comisión Europea facilita una plataforma de resolución de litigios en línea, la cual se encuentra disponible
-                            en el siguiente enlace: <a className={"text-marron underline "} href={"https://ec.europa.eu/consumers/odr/."} target={"_blank"}>https://ec.europa.eu/consumers/odr/.</a></p>
+                    <div className={"ml-5 mt-4 flex flex-col items-start gap-y-10 wrap-anywhere overflow-y-auto scrollbar-none"}>
+                        <h2 className={"text-lg lg:text-4xl font-bold"}>Datos identificativos (art. 10 Ley 34/2002, LSSI-CE)</h2>
                         <p className={"text-lg lg:text-2xl"}><span className={"font-bold"}>Titular: </span>Airam Ramón del Rosario Rodríguez</p>
+                        <p className={"text-lg lg:text-2xl"}><span className={"font-bold"}>NIF: </span>42254405R</p>
                         <p className={"text-lg lg:text-2xl"}><span className={"font-bold"}>Dirección: </span>C/Tahona Nº2 Arguineguin, Mogán 35120, Las Palmas</p>
-                        <p className={"text-lg lg:text-2xl"}><span className={"font-bold"}>Correo elecrtronico: </span>Delrosariorodriguezairam@gmail.com </p>
+                        <p className={"text-lg lg:text-2xl"}><span className={"font-bold"}>Correo electronico: </span>isibusinesscontact@gmail.com</p>
                         <p className={"text-lg lg:text-2xl"}><span className={"font-bold"}>Contacto: </span>+34 676 055 670</p>
+                        <hr className={"w-full"}/>
+                        <div className={"text-lg flex flex-col gap-y-2 lg:text-2xl"}>
+                            <h3 className={"font-bold"}>Objeto</h3>
+                            <p>Esta web tiene carácter informativo y publicitario sobre los servicios de pintura, reformas y otros trabajos ofrecidos por el titular.
+                                La contratación de los servicios, los presupuestos y los pagos se realizan fuera de este sitio web, por contacto directo.</p>
+                        </div>
+                        <div className={"text-lg flex flex-col gap-y-2 lg:text-2xl"}>
+                            <h3 className={"font-bold"}>Propiedad intelectual</h3>
+                            <p>Los textos, imágenes, logotipos y demás contenidos de la web son titularidad de su propietario o se usan con la debida autorización.
+                                Queda prohibida su reproducción total o parcial sin consentimiento expreso.</p>
+                        </div>
+                        <div className={"text-lg flex flex-col gap-y-2 lg:text-2xl"}>
+                            <h3 className={"font-bold"}>Responsabilidad</h3>
+                            <p>El titular procura que la información sea correcta y actual, pero no garantiza la ausencia de errores.
+                                Los presupuestos y condiciones concretas son los comunicados por escrito al cliente en cada caso.</p>
+                        </div>
+                        <div className={"text-lg flex flex-col gap-y-2 lg:text-2xl"}>
+                            <h3 className={"font-bold"}>Legislación aplicable</h3>
+                            <p>Este aviso se rige por la legislación española. Para cualquier controversia,
+                                serán competentes los juzgados y tribunales que correspondan conforme a la normativa vigente.</p>
+                        </div>
                     </div>
                 </div>
             </div>
