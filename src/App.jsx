@@ -45,9 +45,9 @@ const servicios = [
 function ServiciosView({servicioActual, setServicioActual})
 {
     return (
-        <section className="flex flex-col mt-4 items-center lg:h-screen">
+        <section className="flex flex-col mt-4 items-center lg:h-screen pb-4">
             <h1 className="text-3xl font-bold text-left ml-4 mb-2 lg:text-6xl">Nuestros servicios</h1>
-            <hr className="h-1 w-85 lg:w-300 bg-orange-900 mb-10 mt-3 mx-auto"/>
+            <hr className="h-1 w-85 lg:w-300 bg-marron mb-10 mt-3 mx-auto"/>
             < ServiciosViewTarjetas />
             < ServiciosViewCarrusel servicioActual={servicioActual} setServicioActual={setServicioActual} />
         </section>
@@ -59,15 +59,15 @@ function ServiciosViewCarrusel({servicioActual, setServicioActual})
     return (
         <div className="lg:hidden flex flex-col">
             <div className="flex flex-col lg:justify-center lg:gap-x-20 lg:mt-10">
-                <div className="relative flex text-center items-center lg:w-[50%] lg:justify-center ">
-                    <button className={`absolute z-50 left-2 bg-black py-3 px-4 rounded-full opacity-70 text-white font-bold ${servicioActual === 0 ? "invisible" : "visible"}`}
+                <div className="relative flex text-center items-center lg:w-[50%] lg:justify-center z-20">
+                    <button className={`absolute z-30 left-2 bg-black py-3 px-4 rounded-full opacity-70 text-white font-bold ${servicioActual === 0 ? "invisible" : "visible"}`}
                             onClick={() => {
                                 if (servicioActual > 0) setServicioActual(servicioActual - 1);
                             }}>
                         <FaArrowRight className="rotate-180"/>
                     </button>
-                    <img src={servicios[servicioActual].img} alt="" className="contain-content "/>
-                    <button className={`absolute z-50 right-2 bg-black py-3 px-4 rounded-full opacity-70 text-white font-bold ${servicioActual === servicios.length - 1 ? "invisible" : "visible"}`}
+                    <img src={servicios[servicioActual].img} alt={servicios[servicioActual].name} className="contain-content "/>
+                    <button className={`absolute z-30 right-2 bg-black py-3 px-4 rounded-full opacity-70 text-white font-bold ${servicioActual === servicios.length - 1 ? "invisible" : "visible"}`}
                             onClick={() => {
                                 if (servicioActual < servicios.length - 1) setServicioActual(servicioActual + 1);
                             }}><FaArrowRight />
@@ -97,9 +97,9 @@ function ServiciosViewTarjetas()
         <div className="hidden lg:grid grid-cols-3 grid-rows-2 gap-x-10 gap-y-10">
             {servicios.map((servicio) => {
                 return (
-                    <div key={servicio.name} className={"group w-90 outline-1 rounded-2xl p-2 hover:-translate-y-8 transition-transform ease-in-out duration-300"}>
-                        <img src={servicio.img} alt="" className={"rounded-2xl"}/>
-                        <h2 className={"text-2xl font-bold group-hover:text-orange-900"}>{servicio.name}</h2>
+                    <div key={servicio.name} className={"group w-90 outline-1 rounded-2xl p-2 hover:-translate-y-8 transition-transform ease-in-out duration-300 hover:shadow-2xl hover:shadow-marron"}>
+                        <img src={servicio.img} alt={servicio.name} className={"rounded-2xl"}/>
+                        <h2 className={"text-2xl font-bold group-hover:text-marron"}>{servicio.name}</h2>
                         <p className={"text-lg "}>{servicio.description}</p>
                     </div>
                 )
@@ -108,51 +108,55 @@ function ServiciosViewTarjetas()
         </div>
     )
 }
-
-function App() {
-    const [servicioActual, setServicioActual] = useState(0);
+function Inicio(){
     return (
-    <>
-        <Header />
         <section className="w-full h-screen mx-auto relative justify-center mask-b-from-80% mask-t-from-80% ">
-            <img className="absolute inset-0 w-full h-full object-cover" src="/hombre_pintando.jpg"/>
+            <img className="absolute inset-0 w-full h-full object-cover" src="/hombre_pintando.jpg" alt="Hombre Pintando"/>
             <div className="flex flex-col mx-auto text-center justify-center gap-y-4 items-center absolute inset-0 bg-black/50 text-white lg:max-w-300 lg:mask-l-from-80% lg:mask-r-from-80% ">
                 <h1 className="text-3xl font-bold lg:text-7xl max-w-80 lg:max-w-220">¿Cuánto costaría la reforma que tienes en mente?</h1>
                 <h2 className="text-2xl lg:text-5xl max-w-80 lg:max-w-150">En ISI te ayudamos a valorar tu proyecto. Solicita tu presupuesto gratis y sin compromiso.</h2>
                 <div className="flex justify-center gap-x-8 mx-5 lg:gap-x-60 lg:mt-10">
-                    <button className="p-3 hover:bg-white/80 transition duration-500 ease-in-out hover:text-orange-900 bg-orange-900 lg:rounded-4xl rounded-2xl text-white font-bold outline-2 outline-black hover:text-shadow hover:shadow-xl lg:text-4xl lg:p-5"
-                    onClick={() => {window.location.href = "tel:+34676055670"}}>Quiero mi <br/>presupuesto</button>
+                    <button className="p-3 hover:bg-white/80 transition duration-500 ease-in-out hover:text-marron bg-marron lg:rounded-4xl rounded-2xl text-white font-bold outline-2 outline-black hover:text-shadow hover:shadow-xl lg:text-4xl lg:p-5"
+                            onClick={() => {window.location.href = "tel:+34676055670"}}>Quiero mi <br/>presupuesto</button>
                 </div>
             </div>
         </section>
-        <section className="mt-4 flex flex-col lg:flex lg:flex-row lg:w-[95%] lg:mx-auto lg:mt-40 lg:mb-20 justify-center items-center lg:gap-x-12 lg:h-screen">
+    )
+}
+function Nosotros(){
+    return (
+        <section className="mt-4 flex flex-col lg:flex lg:flex-row lg:w-[95%] lg:mx-auto lg:mb-20 justify-center items-center lg:gap-x-12 lg:h-screen">
             <div className="lg: flex flex-col justify-center items-center w-full">
                 <h1 className="text-3xl font-bold ml-4 text-center lg:text-6xl">Sobre nosotros</h1>
-                <div className="h-1 w-60 lg:w-140 bg-orange-900 mx-auto lg:mt-2 lg:mb-10"></div>
-                <img src="/reformas.jpg" className="hidden lg:block w-400"/>
+                <div className="h-1 w-60 lg:w-140 bg-marron mx-auto lg:mt-2 lg:mb-10"></div>
+                <img src="/reformas.jpg" className="hidden lg:block w-400" alt="Personas haciendo reformas"/>
             </div>
-            <p className="mx-4 text-lg lg:text-4xl lg:w-300">En <span className="font-bold text-orange-900">ISI</span> damos color a tus ideas. Realizamos trabajos de pintura, reformas y soluciones para hogares y locales, con un trato cercano, calidad garantizada y presupuesto sin compromiso. Tu espacio, nuestra obra.</p>
+            <p className="mx-4 text-lg lg:text-4xl lg:w-300"><span className="font-bold text-marron">En ISI damos color a tus ideas.</span> Realizamos trabajos de pintura, reformas y soluciones para hogares y locales, con un trato cercano, calidad garantizada y presupuesto sin compromiso. Tu espacio, nuestra obra.</p>
         </section>
-        <section className="mt-4 lg:mt-20 lg:mb-20 lg:h-screen">
+    )
+}
+function Elegirnos(){
+    return (
+        <section className="mt-4 lg:h-screen bg-marron text-white lg:pt-10 py-4">
             <h1 className="text-3xl font-bold text-center lg:text-6xl">¿Por qué elegirnos?</h1>
-            <div className="h-1 w-80 lg:w-175 bg-orange-900 mx-auto lg:mt-5"></div>
+            <div className="h-1 w-80 lg:w-175 bg-white mx-auto lg:mt-5"></div>
             <div className="lg:flex lg:gap-x-10 lg:justify-center">
                 <div className="flex justify-center my-auto ml-4">
-                    <ul className="list-inside text-lg mt-4 lg:text-4xl lg:ml-5 lg:mt-10 lg:grid lg:grid-cols-2 lg:grid-rows-2">
-                        <li className="lg:max-w-130">
+                    <ul className="list-inside text-lg mt-4 lg:text-4xl lg:ml-5 lg:mt-10 lg:grid lg:grid-cols-2 lg:grid-rows-2 ">
+                        <li className="lg:max-w-130 lg:border-b lg:border-r lg:p-4">
                             <p className="font-bold">Presupuesto sin compromiso</p>
                             <p className="text-sm mx-6 mb-2 lg:text-3xl lg:mb-20 wrap-anywhere">Nos cuentas qué necesitas, lo vemos contigo y te damos un precio claro. Si no te encaja, no pasa nada.</p>
                         </li>
 
-                        <li className={"lg:max-w-130"}>
+                        <li className={"lg:max-w-130 lg:border-b lg:border-l lg:p-4"}>
                             <p className="font-bold">Trato directo y cercano</p>
                             <p className="text-sm mx-6 mb-2 lg:text-3xl lg:mb-20 wrap-anywhere">Hablas con las personas que van a hacer el trabajo, sin intermediarios ni vueltas. Te explicamos todo con palabras normales.</p>
                         </li>
-                        <li className={"lg:max-w-130"}>
+                        <li className={"lg:max-w-130 lg:border-t lg:border-r lg:p-4"}>
                             <p className="font-bold">Trabajo bien hecho y con garantía</p>
                             <p className="text-sm mx-6 mb-2 lg:text-3xl lg:mb-20 wrap-anywhere">Cuidamos cada detalle y respondemos por lo que hacemos. Si algo no queda como debe, lo arreglamos.</p>
                         </li>
-                        <li className={"lg:max-w-130"}>
+                        <li className={"lg:max-w-130 lg:border-l lg:border-t lg:p-4"}>
                             <p className="font-bold">Experiencia y confianza</p>
                             <p className="text-sm mx-6 lg:text-3xl lg:mb-20 wrap-anywhere">Sabemos lo que es entrar en tu casa o en tu negocio, y lo tratamos como si fuera nuestro.</p>
                         </li>
@@ -163,32 +167,52 @@ function App() {
                     <h2 className="text-2xl font-bold text-center mt-4 lg:text-4xl lg:mb-10">Como trabajamos</h2>
                     <div className="flex flex-col text-lg mt-4 mx-4 gap-y-4 lg:text-3xl lg:justify-center lg:items-center">
                         <div className="flex flex-col items-center lg:items-start">
-                            <GiTeamIdea className="size-15 lg:size-25 lg:mx-auto fill-orange-900"/>
+                            <GiTeamIdea className="size-15 lg:size-25 lg:mx-auto fill-white"/>
                             <p className="">1.Hablamos de tu idea</p>
                         </div>
                         <div className="flex flex-col items-center lg:items-start">
-                            <PiMathOperationsBold className="size-15 lg:size-25 lg:mx-auto fill-orange-900"/>
+                            <PiMathOperationsBold className="size-15 lg:size-25 lg:mx-auto fill-white"/>
                             <p className="">2.Te hacemos el presupuesto</p>
                         </div>
                         <div className="flex flex-col items-center lg:items-start">
-                            <FaPaintRoller className="size-15 lg:size-25 lg:mx-auto fill-orange-900"/>
+                            <FaPaintRoller className="size-15 lg:size-25 lg:mx-auto fill-white"/>
                             <p className="">3.Nos ponemos manos a la obra</p>
                         </div>
                         <div className="flex flex-col items-center lg:items-start">
-                            <FaCheck className="size-15 lg:size-25 lg:mx-auto fill-orange-900"/>
+                            <FaCheck className="size-15 lg:size-25 lg:mx-auto fill-white"/>
                             <p className="">4.Entrega y garantía</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <button className="bg-orange-900 lg:rounded-4xl rounded-2xl p-4 flex mx-auto mt-4 text-4xl text-white lg:p-6 lg:text-6xl">Empieza ya</button>
+            <button className="bg-white lg:rounded-4xl font-bold rounded-2xl p-4 flex mx-auto mt-4 text-4xl text-marron lg:p-6 lg:text-6xl hover:-translate-y-5 hover:translate-x-5 transition duration-300 ease-in-out hover:shadow-2xl hover:shadow-white/60"
+            onClick={() => window.location.href = "tel:+34676055670"}>Empieza ya</button>
 
         </section>
+    )
+}
+
+function App() {
+    const [servicioActual, setServicioActual] = useState(0);
+    const [avisoLegalView, setAvisoLegalView] = useState(true);
+    return (
+    <>
+        {avisoLegalView && (
+            <div className={"fixed flex justify-center items-center inset-0 z-50"}>
+                <button className={"bg-black/30 fixed inset-0 z-40"} onClick={() => setAvisoLegalView(false)}></button>
+                <div className={"bg-white z-100 top-0 left-0 w-[90%] h-[90%]"}>
+
+                </div>
+            </div>
+
+        )}
+        <Header />
+        <Inicio />
+        <Nosotros />
+        <Elegirnos />
         <ServiciosView servicioActual={servicioActual} setServicioActual={setServicioActual} />
-
-
-        <Footer />
+        <Footer avisoLegal={setAvisoLegalView}/>
     </>
   )
 }
