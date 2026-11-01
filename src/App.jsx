@@ -46,7 +46,7 @@ const servicios = [
 function ServiciosView({servicioActual, setServicioActual})
 {
     return (
-        <section className="flex flex-col mt-4  items-center lg:pb-10">
+        <section id={"servicios"} className="flex flex-col mt-4  items-center lg:pb-10 ">
             <h1 className="text-3xl font-bold text-left ml-4 mb-2 lg:text-6xl">Nuestros servicios</h1>
             <div className="h-1 w-70 lg:w-150 bg-secundary mx-auto lg:mt-5 lg:mb-10 mb-4"></div>
             < ServiciosViewTarjetas />
@@ -95,10 +95,10 @@ function ServiciosViewCarrusel({servicioActual, setServicioActual})
 function ServiciosViewTarjetas()
 {
     return (
-        <div className="hidden lg:grid grid-cols-3 gap-x-10 gap-y-10">
+        <div className="hidden lg:grid lg:grid-cols-2 xl:grid-cols-3 gap-x-10 gap-y-10">
             {servicios.map((servicio) => {
                 return (
-                    <div key={servicio.name} className={"group w-90 outline-primary rounded-2xl p-2 hover:-translate-y-8 transition-transform ease-in-out duration-300 shadow-2xl shadow-primary"}>
+                    <div key={servicio.name} className={"group w-90 pb-10 outline-primary rounded-2xl p-2 hover:-translate-y-8 transition-transform ease-in-out duration-300 shadow-2xl shadow-primary"}>
                         <img src={servicio.img} alt={servicio.name} className={"rounded-2xl"}/>
                         <h2 className={"text-2xl font-bold group-hover:text-secundary"}>{servicio.name}</h2>
                         <p className={"text-lg "}>{servicio.description}</p>
@@ -112,26 +112,33 @@ function ServiciosViewTarjetas()
 function Inicio(){
     return (
         <section className="w-full flex justify-center bg-primary items-center lg:py-20 lg:rounded-2xl py-8 px-2">
-            <div className="flex flex-col mx-auto text-center justify-center gap-y-4 items-center  text-white lg:w-1/3 ">
-                <h1 className="text-3xl font-bold lg:text-7xl max-w-80 lg:max-w-220 text-start">¿Cuánto costaría la reforma que tienes en mente?</h1>
-                <h2 className="text-ºxl lg:text-5xl max-w-80 lg:max-w-220 text-start text-background">En ISI te ayudamos a valorar tu proyecto. Solicita tu presupuesto gratis y sin compromiso.</h2>
-                <div className="flex justify-center gap-x-8 mx-5 lg:gap-x-60 lg:mt-10">
-                    <a href={"tel:+34676055670"} className="p-3 hover:bg-white/80 transition duration-500 ease-in-out hover:text-primary bg-secundary lg:rounded-4xl rounded-2xl text-white font-bold outline-2 outline-black hover:text-shadow hover:shadow-xl lg:text-4xl lg:p-5"
-                    >Quiero mi <br/>presupuesto</a>
+            <div className="flex flex-col mx-auto text-center items-center gap-y-4 text-white lg:w-1/4 ">
+                <h1 className="text-3xl font-bold lg:text-7xl max-w-80 lg:max-w-220 ">¿Cuánto costaría la reforma que tienes en mente?</h1>
+                <h2 className="text-ºxl lg:text-5xl max-w-80 lg:max-w-220 text-background">En ISI te ayudamos a valorar tu proyecto. Solicita tu presupuesto gratis y sin compromiso.</h2>
+                <div className={"flex lg:gap-x-10 gap-2"}>
+                    <div className="flex lg:mt-10">
+                        <a href={"tel:+34676055670"} className="p-3 transition duration-500 lg:w-70 ease-in-out  bg-secundary lg:rounded-4xl rounded-2xl text-white font-bold outline-2 outline-primary hover:text-shadow hover:shadow-xl lg:text-4xl lg:p-5 hover:-translate-y-3 hover:translate-x-3"
+                        >Quiero mi <br/>presupuesto</a>
+                    </div>
+                    <div className="flex lg:mt-10 ">
+                        <a href={"#servicios"} className="p-3 transition duration-500 lg:w-70 ease-in-out bg-white lg:rounded-4xl rounded-2xl text-secundary font-bold outline-2 outline-primary hover:text-shadow hover:shadow-xl lg:text-4xl lg:p-5 hover:-translate-y-3 hover:translate-x-3"
+                        >Nuestros <br/>servicios</a>
+                    </div>
                 </div>
+
             </div>
-            <img className="block w-1/3 h-80 lg:w-120 lg:h-160 object-cover mx-auto rounded-3xl" src="/hombre_pintando_color.webp" alt="Hombre Pintando"/>
+            <img className="hidden lg:block w-1/3 h-80 lg:max-w-180 lg:h-160 object-cover mx-auto rounded-3xl" src="/hombre_pintando_color.webp" alt="Hombre Pintando"/>
 
         </section>
     )
 }
 function Nosotros(){
     return (
-        <section className="mt-4 flex flex-col py-10 lg:flex lg:flex-row lg:w-[95%] lg:mx-auto lg:mb-20 justify-center items-center lg:gap-x-12 ">
+        <section className="mt-4 flex flex-col pb-10 lg:flex lg:flex-row lg:w-[95%] lg:mx-auto lg:mb-20 justify-center items-center ">
             <div className="flex flex-col justify-center items-center w-full">
                 <h1 className="text-3xl font-bold ml-4 text-center lg:text-6xl">Sobre nosotros</h1>
                 <div className="h-1 w-60 lg:w-140 bg-secundary mx-auto lg:mt-2 lg:mb-10"></div>
-                <img src="/reformas.webp" className="hidden lg:block w-400 rounded-2xl" alt="Personas haciendo reformas"/>
+                <img src="/reformas.webp" className="hidden lg:block w-220 rounded-2xl" alt="Personas haciendo reformas"/>
             </div>
             <h2 className="mx-4 text-lg lg:text-4xl lg:w-300"><span className="font-bold text-secundary">En ISI damos color a tus ideas.</span> Realizamos trabajos de pintura, reformas y soluciones para hogares y locales, con un trato cercano, calidad garantizada y presupuesto sin compromiso. Tu espacio, nuestra obra.</h2>
         </section>
@@ -188,7 +195,7 @@ function Elegirnos(){
                 </div>
             </div>
 
-            <a href={"tel:+34676055670"} className="bg-background max-w-60 lg:max-w-95 text-center lg:rounded-4xl font-bold rounded-2xl p-4 flex mx-auto mt-4 text-4xl text-primary lg:p-6 lg:text-6xl hover:-translate-y-5 hover:translate-x-5 transition duration-300 ease-in-out hover:shadow-2xl hover:shadow-white/60"
+            <a href={"tel:+34676055670"} className="bg-background max-w-50 lg:max-w-80 text-center lg:rounded-4xl font-bold rounded-2xl p-4 flex mx-auto mt-4 text-3xl text-primary lg:p-6 lg:text-5xl hover:-translate-y-5 hover:translate-x-5 transition duration-300 ease-in-out hover:shadow-2xl hover:shadow-white/60"
             >Empieza ya</a>
         </section>
     )
