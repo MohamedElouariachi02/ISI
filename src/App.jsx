@@ -46,7 +46,7 @@ const servicios = [
 function ServiciosView({servicioActual, setServicioActual})
 {
     return (
-        <section className="flex flex-col mt-4 items-center lg:min-h-screen lg:pb-4">
+        <section className="flex flex-col mt-4  items-center lg:pb-10">
             <h1 className="text-3xl font-bold text-left ml-4 mb-2 lg:text-6xl">Nuestros servicios</h1>
             <div className="h-1 w-70 lg:w-150 bg-secundary mx-auto lg:mt-5 lg:mb-10 mb-4"></div>
             < ServiciosViewTarjetas />
@@ -95,7 +95,7 @@ function ServiciosViewCarrusel({servicioActual, setServicioActual})
 function ServiciosViewTarjetas()
 {
     return (
-        <div className="hidden lg:grid grid-cols-3 grid-rows-2 gap-x-10 gap-y-10">
+        <div className="hidden lg:grid grid-cols-3 gap-x-10 gap-y-10">
             {servicios.map((servicio) => {
                 return (
                     <div key={servicio.name} className={"group w-90 outline-primary rounded-2xl p-2 hover:-translate-y-8 transition-transform ease-in-out duration-300 shadow-2xl shadow-primary"}>
