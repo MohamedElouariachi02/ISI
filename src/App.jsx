@@ -74,7 +74,7 @@ function ServiciosViewCarrusel({servicioActual, setServicioActual})
                             }}><FaArrowRight />
                     </button>
                 </div>
-                <div className="mt-4 mb-4 text-wrap ml-4">
+                <div className="mt-4 mb-4 text-wrap mx-4">
                     <p className="text-xl font-bold lg:text-4xl">{servicios[servicioActual].name}</p>
                     <p className="text-lg lg:w-100 lg:text-2xl lg:mt-4">{servicios[servicioActual].description}</p>
                 </div>
@@ -210,7 +210,7 @@ function AvisoLegal({setAvisoLegalView}){
                             onClick={() => setAvisoLegalView(false)}>
                         < IoClose className={"size-10 hover:fill-red-500 duration-300 transition"}/>
                     </button>
-                    <h1 className={"text-4xl text-start lg:text-center font-bold text-primary lg:text-6xl"}>Aviso Legal</h1>
+                    <h1 className={"text-4xl text-start lg:text-center font-bold text-secundary lg:text-6xl"}>Aviso Legal</h1>
                 </div>
 
                 <div className={"ml-5 mt-4 flex flex-col items-start gap-y-5 wrap-anywhere overflow-y-auto scrollbar-none"}>
