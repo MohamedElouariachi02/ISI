@@ -117,11 +117,11 @@ function Inicio(){
                 <h2 className="text-ºxl lg:text-5xl max-w-80 lg:max-w-220 text-background">En ISI te ayudamos a valorar tu proyecto. Solicita tu presupuesto gratis y sin compromiso.</h2>
                 <div className={"flex lg:gap-x-10 gap-2"}>
                     <div className="flex lg:mt-10">
-                        <a href={"tel:+34676055670"} className="p-3 transition duration-500 lg:w-70 ease-in-out  bg-secundary lg:rounded-4xl rounded-2xl text-white font-bold outline-2 outline-primary hover:text-shadow hover:shadow-xl lg:text-4xl lg:p-5 hover:-translate-y-3 hover:translate-x-3"
+                        <a href={"tel:+34676055670"} className="p-3 transition duration-500 w-35 lg:w-70 ease-in-out  bg-secundary lg:rounded-4xl rounded-2xl text-white font-bold outline-2 outline-primary hover:text-shadow hover:shadow-xl lg:text-4xl lg:p-5 hover:-translate-y-3 hover:translate-x-3"
                         >Quiero mi <br/>presupuesto</a>
                     </div>
                     <div className="flex lg:mt-10 ">
-                        <a href={"#servicios"} className="p-3 transition duration-500 lg:w-70 ease-in-out bg-white lg:rounded-4xl rounded-2xl text-secundary font-bold outline-2 outline-primary hover:text-shadow hover:shadow-xl lg:text-4xl lg:p-5 hover:-translate-y-3 hover:translate-x-3"
+                        <a href={"#servicios"} className="p-3 transition duration-500 w-35 lg:w-70 ease-in-out bg-white lg:rounded-4xl rounded-2xl text-secundary font-bold outline-2 outline-primary hover:text-shadow hover:shadow-xl lg:text-4xl lg:p-5 hover:-translate-y-3 hover:translate-x-3"
                         >Nuestros <br/>servicios</a>
                     </div>
                 </div>
@@ -135,7 +135,7 @@ function Inicio(){
 function Nosotros(){
     return (
         <section className="mt-4 flex flex-col pb-10 lg:flex lg:flex-row lg:w-[95%] lg:mx-auto lg:mb-20 justify-center items-center ">
-            <div className="flex flex-col justify-center items-center w-full">
+            <div className="flex flex-col justify-center items-center w-full mb-10">
                 <h1 className="text-3xl font-bold ml-4 text-center lg:text-6xl">Sobre nosotros</h1>
                 <div className="h-1 w-60 lg:w-140 bg-secundary mx-auto lg:mt-2 lg:mb-10"></div>
                 <img src="/reformas.webp" className="hidden lg:block w-220 rounded-2xl" alt="Personas haciendo reformas"/>
@@ -150,18 +150,18 @@ function Elegirnos(){
             <h1 className="text-3xl font-bold text-center lg:text-6xl">¿Por qué elegirnos?</h1>
             <div className="h-1 w-80 lg:w-175 bg-secundary mx-auto lg:mt-5"></div>
             <div className="lg:flex lg:gap-x-10 lg:justify-center">
-                <div className="flex justify-center my-auto ml-4">
+                <div className="flex justify-center my-auto mb-8 ml-4">
                     <ul className="list-inside text-lg mt-4 lg:text-4xl lg:ml-5 lg:mt-10 lg:grid lg:grid-cols-2 lg:grid-rows-2 ">
-                        <li className="lg:max-w-130 border-b lg:border-b lg:border-r lg:p-4">
+                        <li className="lg:max-w-130 lg:border-b lg:border-r lg:p-4">
                             <h2 className="font-bold">Presupuesto sin compromiso</h2>
                             <p className="text-sm mx-6 mb-2 lg:text-3xl lg:mb-20 wrap-anywhere">Nos cuentas qué necesitas, lo vemos contigo y te damos un precio claro. Si no te encaja, no pasa nada.</p>
                         </li>
 
-                        <li className={"lg:max-w-130 border-b lg:border-b lg:border-l lg:p-4"}>
+                        <li className={"lg:max-w-130 lg:border-b lg:border-l lg:p-4"}>
                             <h2 className="font-bold">Trato directo y cercano</h2>
                             <p className="text-sm mx-6 mb-2 lg:text-3xl lg:mb-20 wrap-anywhere">Hablas con las personas que van a hacer el trabajo, sin intermediarios ni vueltas. Te explicamos todo con palabras normales.</p>
                         </li>
-                        <li className={"lg:max-w-130 border-b lg:border-b-0 lg:border-t lg:border-r lg:p-4"}>
+                        <li className={"lg:max-w-130 lg:border-b-0 lg:border-t lg:border-r lg:p-4"}>
                             <h2 className="font-bold">Trabajo bien hecho y con garantía</h2>
                             <p className="text-sm mx-6 mb-2 lg:text-3xl lg:mb-20 wrap-anywhere">Cuidamos cada detalle y respondemos por lo que hacemos. Si algo no queda como debe, lo arreglamos.</p>
                         </li>
@@ -173,7 +173,6 @@ function Elegirnos(){
                 </div>
 
                 <div className="flex flex-col items-center justify-center">
-                    <h2 className="text-2xl font-bold text-center mt-4 lg:text-4xl lg:mb-10">Cómo trabajamos</h2>
                     <div className="lg:flex lg:flex-col text-center grid grid-cols-2  text-lg mt-4 mx-4 gap-y-4 lg:text-3xl lg:justify-center lg:items-center">
                         <div className="flex flex-col items-center lg:items-start">
                             <GiTeamIdea className="size-15 lg:size-20 lg:mx-auto fill-background"/>
