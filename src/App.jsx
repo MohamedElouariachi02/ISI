@@ -13,32 +13,32 @@ import { IoClose } from "react-icons/io5";
 const servicios = [
     {
         name: "Pintura",
-        img: "/pintura.jpg",
+        img: "/pintura.webp",
         description: "Por dentro o por fuera, le damos a tus paredes la cara nueva que se merecen. Con mimo en los detalles y sin dejarte la casa hecha un desastre."
     },
     {
         name: "Reformas",
-        img: "/reformas.jpg",
+        img: "/reformas.webp",
         description: "Tu casa o tu local, como siempre lo has querido. Nos cuentas la idea, la ajustamos a tu bolsillo y nos ponemos manos a la obra."
     },
     {
         name: "Albañilería",
-        img: "/albañileria.jpg",
+        img: "/albañileria.webp",
         description: "Desde ese arreglo que lleva meses esperando hasta un suelo nuevo. Trabajo bien hecho, de los que se ven y de los que no se ven."
     },
     {
         name: "Revestimientos",
-        img: "/revestimiento.jpg",
+        img: "/revestimiento.webp",
         description: "Un buen revestimiento cambia una habitación entera. Te ayudamos a elegir el acabado que mejor le va a tu espacio y a tu estilo."
     },
     {
         name: "Impermeabilización",
-        img: "/impermeabilizacion.jpg",
+        img: "/impermeabilizacion.webp",
         description: "¿Humedades, manchas en el techo, goteras cuando llueve? Las atajamos de raíz para que vuelvas a olvidarte del problema."
     },
     {
         name: "Trabajos a medida",
-        img: "/trabajo_medida.jpg",
+        img: "/trabajo_medida.webp",
         description: "Si lo tienes en la cabeza, lo hacemos realidad. Cuéntanos qué necesitas y lo planteamos juntos, con garantía y sin florituras."
     },
 ]
@@ -111,54 +111,55 @@ function ServiciosViewTarjetas()
 }
 function Inicio(){
     return (
-        <section className="w-full h-screen mx-auto relative justify-center mask-b-from-80% mask-t-from-80% ">
-            <img className="absolute inset-0 w-full h-full object-cover" src="/hombre_pintando.jpg" alt="Hombre Pintando"/>
-            <div className="flex flex-col mx-auto text-center justify-center gap-y-4 items-center absolute inset-0 bg-black/50 backdrop-blur-xs text-white lg:max-w-300 lg:mask-l-from-80% lg:mask-r-from-80% ">
-                <h1 className="text-3xl font-bold lg:text-7xl max-w-80 lg:max-w-220">¿Cuánto costaría la reforma que tienes en mente?</h1>
-                <h2 className="text-2xl lg:text-5xl max-w-80 lg:max-w-150">En ISI te ayudamos a valorar tu proyecto. Solicita tu presupuesto gratis y sin compromiso.</h2>
+        <section className="w-full flex justify-center bg-primary items-center lg:py-20 lg:rounded-2xl py-8 px-2">
+            <div className="flex flex-col mx-auto text-center justify-center gap-y-4 items-center  text-white lg:w-1/3 ">
+                <h1 className="text-3xl font-bold lg:text-7xl max-w-80 lg:max-w-220 text-start">¿Cuánto costaría la reforma que tienes en mente?</h1>
+                <h2 className="text-ºxl lg:text-5xl max-w-80 lg:max-w-220 text-start text-background">En ISI te ayudamos a valorar tu proyecto. Solicita tu presupuesto gratis y sin compromiso.</h2>
                 <div className="flex justify-center gap-x-8 mx-5 lg:gap-x-60 lg:mt-10">
-                    <a href={"tel:+34676055670"} className="p-3 hover:bg-white/80 transition duration-500 ease-in-out hover:text-primary bg-primary lg:rounded-4xl rounded-2xl text-white font-bold outline-2 outline-black hover:text-shadow hover:shadow-xl lg:text-4xl lg:p-5"
-                            >Quiero mi <br/>presupuesto</a>
+                    <a href={"tel:+34676055670"} className="p-3 hover:bg-white/80 transition duration-500 ease-in-out hover:text-primary bg-secundary lg:rounded-4xl rounded-2xl text-white font-bold outline-2 outline-black hover:text-shadow hover:shadow-xl lg:text-4xl lg:p-5"
+                    >Quiero mi <br/>presupuesto</a>
                 </div>
             </div>
+            <img className="block w-1/3 h-80 lg:w-120 lg:h-160 object-cover mx-auto rounded-3xl" src="/hombre_pintando_color.webp" alt="Hombre Pintando"/>
+
         </section>
     )
 }
 function Nosotros(){
     return (
-        <section className="mt-4 flex flex-col lg:flex lg:flex-row lg:w-[95%] lg:mx-auto lg:mb-20 justify-center items-center lg:gap-x-12 lg:h-screen">
-            <div className="lg: flex flex-col justify-center items-center w-full">
+        <section className="mt-4 flex flex-col py-10 lg:flex lg:flex-row lg:w-[95%] lg:mx-auto lg:mb-20 justify-center items-center lg:gap-x-12 ">
+            <div className="flex flex-col justify-center items-center w-full">
                 <h1 className="text-3xl font-bold ml-4 text-center lg:text-6xl">Sobre nosotros</h1>
                 <div className="h-1 w-60 lg:w-140 bg-secundary mx-auto lg:mt-2 lg:mb-10"></div>
-                <img src="/reformas.jpg" className="hidden lg:block w-400" alt="Personas haciendo reformas"/>
+                <img src="/reformas.webp" className="hidden lg:block w-400 rounded-2xl" alt="Personas haciendo reformas"/>
             </div>
-            <p className="mx-4 text-lg lg:text-4xl lg:w-300"><span className="font-bold text-secundary">En ISI damos color a tus ideas.</span> Realizamos trabajos de pintura, reformas y soluciones para hogares y locales, con un trato cercano, calidad garantizada y presupuesto sin compromiso. Tu espacio, nuestra obra.</p>
+            <h2 className="mx-4 text-lg lg:text-4xl lg:w-300"><span className="font-bold text-secundary">En ISI damos color a tus ideas.</span> Realizamos trabajos de pintura, reformas y soluciones para hogares y locales, con un trato cercano, calidad garantizada y presupuesto sin compromiso. Tu espacio, nuestra obra.</h2>
         </section>
     )
 }
 function Elegirnos(){
     return (
-        <section className="mt-4 lg:min-h-screen bg-primary text-background lg:pt-10 py-4">
+        <section className="mt-4  bg-primary text-background lg:pt-10 py-4 lg:py-8">
             <h1 className="text-3xl font-bold text-center lg:text-6xl">¿Por qué elegirnos?</h1>
             <div className="h-1 w-80 lg:w-175 bg-secundary mx-auto lg:mt-5"></div>
             <div className="lg:flex lg:gap-x-10 lg:justify-center">
                 <div className="flex justify-center my-auto ml-4">
                     <ul className="list-inside text-lg mt-4 lg:text-4xl lg:ml-5 lg:mt-10 lg:grid lg:grid-cols-2 lg:grid-rows-2 ">
                         <li className="lg:max-w-130 border-b lg:border-b lg:border-r lg:p-4">
-                            <p className="font-bold">Presupuesto sin compromiso</p>
+                            <h2 className="font-bold">Presupuesto sin compromiso</h2>
                             <p className="text-sm mx-6 mb-2 lg:text-3xl lg:mb-20 wrap-anywhere">Nos cuentas qué necesitas, lo vemos contigo y te damos un precio claro. Si no te encaja, no pasa nada.</p>
                         </li>
 
                         <li className={"lg:max-w-130 border-b lg:border-b lg:border-l lg:p-4"}>
-                            <p className="font-bold">Trato directo y cercano</p>
+                            <h2 className="font-bold">Trato directo y cercano</h2>
                             <p className="text-sm mx-6 mb-2 lg:text-3xl lg:mb-20 wrap-anywhere">Hablas con las personas que van a hacer el trabajo, sin intermediarios ni vueltas. Te explicamos todo con palabras normales.</p>
                         </li>
                         <li className={"lg:max-w-130 border-b lg:border-b-0 lg:border-t lg:border-r lg:p-4"}>
-                            <p className="font-bold">Trabajo bien hecho y con garantía</p>
+                            <h2 className="font-bold">Trabajo bien hecho y con garantía</h2>
                             <p className="text-sm mx-6 mb-2 lg:text-3xl lg:mb-20 wrap-anywhere">Cuidamos cada detalle y respondemos por lo que hacemos. Si algo no queda como debe, lo arreglamos.</p>
                         </li>
                         <li className={"lg:max-w-130 lg:border-l lg:border-t lg:p-4"}>
-                            <p className="font-bold">Experiencia y confianza</p>
+                            <h2 className="font-bold">Experiencia y confianza</h2>
                             <p className="text-sm mx-6 lg:text-3xl lg:mb-20 wrap-anywhere">Sabemos lo que es entrar en tu casa o en tu negocio, y lo tratamos como si fuera nuestro.</p>
                         </li>
                     </ul>
@@ -166,22 +167,22 @@ function Elegirnos(){
 
                 <div className="flex flex-col items-center justify-center">
                     <h2 className="text-2xl font-bold text-center mt-4 lg:text-4xl lg:mb-10">Cómo trabajamos</h2>
-                    <div className="flex flex-col text-lg mt-4 mx-4 gap-y-4 lg:text-3xl lg:justify-center lg:items-center">
+                    <div className="lg:flex lg:flex-col text-center grid grid-cols-2  text-lg mt-4 mx-4 gap-y-4 lg:text-3xl lg:justify-center lg:items-center">
                         <div className="flex flex-col items-center lg:items-start">
-                            <GiTeamIdea className="size-15 lg:size-25 lg:mx-auto fill-background"/>
-                            <p className="">1. Hablamos de tu idea</p>
+                            <GiTeamIdea className="size-15 lg:size-20 lg:mx-auto fill-background"/>
+                            <h2 className="">1. Hablamos de tu idea</h2>
+                        </div>
+                        <div className="flex flex-col items-center lg:items-start ">
+                            <PiMathOperationsBold className="size-15 lg:size-20 lg:mx-auto fill-background"/>
+                            <h2 className="">2. Te hacemos el presupuesto</h2>
                         </div>
                         <div className="flex flex-col items-center lg:items-start">
-                            <PiMathOperationsBold className="size-15 lg:size-25 lg:mx-auto fill-background"/>
-                            <p className="">2. Te hacemos el presupuesto</p>
+                            <FaPaintRoller className="size-15 lg:size-20 lg:mx-auto fill-background"/>
+                            <h2 className="">3. Nos ponemos manos a la obra</h2>
                         </div>
                         <div className="flex flex-col items-center lg:items-start">
-                            <FaPaintRoller className="size-15 lg:size-25 lg:mx-auto fill-background"/>
-                            <p className="">3. Nos ponemos manos a la obra</p>
-                        </div>
-                        <div className="flex flex-col items-center lg:items-start">
-                            <FaCheck className="size-15 lg:size-25 lg:mx-auto fill-background"/>
-                            <p className="">4. Entrega y garantía</p>
+                            <FaCheck className="size-15 lg:size-20 lg:mx-auto fill-background"/>
+                            <h2 className="">4. Entrega y garantía</h2>
                         </div>
                     </div>
                 </div>
