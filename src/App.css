@@ -2,5 +2,14 @@
 
 
 @theme {
-    --color-marron: #673a17;
+    --color-primary: #332215;
+    --color-border: #673a17;
+    --color-secundary: #CCA07E;
+    --color-surface: #ffe6d2;
+    --color-background: #fff5ea;
+
+
+}
+body {
+    background-color: var(--color-background);
 }
