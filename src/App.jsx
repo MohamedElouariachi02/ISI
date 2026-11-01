@@ -213,7 +213,7 @@ function AvisoLegal({setAvisoLegalView}){
                     <h1 className={"text-4xl text-start lg:text-center font-bold text-primary lg:text-6xl"}>Aviso Legal</h1>
                 </div>
 
-                <div className={"ml-5 mt-4 flex flex-col items-start gap-y-10 wrap-anywhere overflow-y-auto scrollbar-none"}>
+                <div className={"ml-5 mt-4 flex flex-col items-start gap-y-5 wrap-anywhere overflow-y-auto scrollbar-none"}>
                     <h2 className={"text-lg lg:text-4xl font-bold"}>Datos identificativos (art. 10 Ley 34/2002, LSSI-CE)</h2>
                     <p className={"text-lg lg:text-2xl"}><span className={"font-bold"}>Titular: </span>Airam Ramón del Rosario Rodríguez</p>
                     <p className={"text-lg lg:text-2xl"}><span className={"font-bold"}>NIF: </span>42254405R</p>
