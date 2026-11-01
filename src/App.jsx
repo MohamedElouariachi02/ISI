@@ -132,7 +132,7 @@ function Nosotros(){
                 <div className="h-1 w-60 lg:w-140 bg-secundary mx-auto lg:mt-2 lg:mb-10"></div>
                 <img src="/reformas.jpg" className="hidden lg:block w-400" alt="Personas haciendo reformas"/>
             </div>
-            <p className="mx-4 text-lg lg:text-4xl lg:w-300"><span className="font-bold text-primary">En ISI damos color a tus ideas.</span> Realizamos trabajos de pintura, reformas y soluciones para hogares y locales, con un trato cercano, calidad garantizada y presupuesto sin compromiso. Tu espacio, nuestra obra.</p>
+            <p className="mx-4 text-lg lg:text-4xl lg:w-300"><span className="font-bold text-secundary">En ISI damos color a tus ideas.</span> Realizamos trabajos de pintura, reformas y soluciones para hogares y locales, con un trato cercano, calidad garantizada y presupuesto sin compromiso. Tu espacio, nuestra obra.</p>
         </section>
     )
 }
