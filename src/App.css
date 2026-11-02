@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@font-face {
+    font-family: 'Zen+Antique Soft';
+    src: url("./fonts/Zen_Antique_Soft/ZenAntiqueSoft-Regular.ttf") format("truetype");
+}
 
 
 @theme {
@@ -19,17 +23,32 @@ body {
 }
 h1
 {
-    font-size: var(--text-2xl);
+    font-size: var(--text-3xl);
+    font-family: "Zen Antique Soft", serif;
+    font-style: normal;
+    font-weight: bolder;
+
 }
 h2
 {
-    font-size: var(--text-xl);
+    font-size: var(--text-lg);
+    font-family: "Zen Antique Soft", serif;
+    font-weight: bold;
 }
 
 
 p
 {
-    font-size: var(--text-sm);
+    font-size: var(--text-base);
+    font-family: "Zen Antique Soft", serif;
+    font-weight: lighter;
+
+}
+button{
+    font-family: "Zen Antique Soft", serif;
+}
+a{
+    font-family: "Zen Antique Soft", serif;
 }
 @media (min-width: 640px) {
     h1
@@ -55,13 +74,13 @@ p
     }
     h2
     {
-        font-size: var(--text-3xl);
+        font-size: var(--text-2xl);
     }
 
 
     p
     {
-        font-size: var(--text-base);
+        font-size: var(--text-lg);
     }
 }
 

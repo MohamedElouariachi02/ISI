@@ -46,9 +46,8 @@ const servicios = [
 function ServiciosView({servicioActual, setServicioActual})
 {
     return (
-        <section id={"servicios"} className="flex flex-col mt-4  items-center lg:pb-10 ">
-            <h1 className="text-3xl font-bold text-left ml-4 mb-2 lg:text-6xl">Nuestros servicios</h1>
-            <div className="h-1 w-70 lg:w-150 bg-secundary mx-auto lg:mt-5 lg:mb-10 mb-4"></div>
+        <section id={"servicios"} className="flex flex-col mt-10 items-center lg:pb-10 lg:mt-15">
+            <h1 className="text-3xl font-bold text-left ml-4 mb-2 lg:text-6xl underline decoration-secundary lg:mb-15">Nuestros servicios</h1>
             < ServiciosViewTarjetas />
             < ServiciosViewCarrusel servicioActual={servicioActual} setServicioActual={setServicioActual} />
         </section>
@@ -74,16 +73,16 @@ function ServiciosViewCarrusel({servicioActual, setServicioActual})
                             }}><FaArrowRight />
                     </button>
                 </div>
-                <div className="mt-4 mb-4 text-wrap mx-4">
-                    <p className="text-xl font-bold lg:text-4xl">{servicios[servicioActual].name}</p>
+                <div className="mt-4 mb-4 text-wrap mx-4 h-30">
+                    <h2 className="text-xl font-bold lg:text-4xl">{servicios[servicioActual].name}</h2>
                     <p className="text-lg lg:w-100 lg:text-2xl lg:mt-4">{servicios[servicioActual].description}</p>
                 </div>
             </div>
 
-            <div className="flex justify-center gap-x-2 pb-4">
+            <div className="flex justify-center gap-x-2 pb-8">
                 {servicios.map((servicio, index) => {
                     return (
-                        <button className={`rounded-full size-2 lg:size-6 lg:mt-6 cursor-pointer ${servicioActual === index ? "bg-primary" : "bg-gray-300"}`} key={index}
+                        <button className={`rounded-full size-2 lg:size-6 lg:mt-6 cursor-pointer ${servicioActual === index ? "bg-primary" : "bg-secundary"}`} key={index}
                              onClick={() => {setServicioActual(index)}}>
                         </button>
                     )
@@ -95,7 +94,7 @@ function ServiciosViewCarrusel({servicioActual, setServicioActual})
 function ServiciosViewTarjetas()
 {
     return (
-        <div className="hidden lg:grid lg:grid-cols-2 xl:grid-cols-3 gap-x-10 gap-y-10">
+        <div className="hidden lg:grid lg:grid-cols-2 xl:grid-cols-3 gap-x-10 gap-y-10 mb-15 ">
             {servicios.map((servicio) => {
                 return (
                     <div key={servicio.name} className={"group w-90 pb-10 outline-primary rounded-2xl p-2 hover:-translate-y-8 transition-transform ease-in-out duration-300 shadow-2xl shadow-primary"}>
@@ -111,8 +110,8 @@ function ServiciosViewTarjetas()
 }
 function Inicio(){
     return (
-        <section className="w-full flex justify-center bg-primary items-center lg:py-20 lg:rounded-2xl py-8 px-2">
-            <div className="flex flex-col mx-auto text-center items-center gap-y-4 text-white lg:w-1/4 ">
+        <section className="w-full flex justify-center bg-primary items-center lg:py-20 lg:rounded-2xl py-8 px-2 lg:gap-x-60 xl:gap-x-80">
+            <div className="flex flex-col text-center items-center gap-y-4 text-white lg:w-1/4">
                 <h1 className="text-3xl font-bold lg:text-7xl max-w-80 lg:max-w-220 ">¿Cuánto costaría la reforma que tienes en mente?</h1>
                 <h2 className="text-ºxl lg:text-5xl max-w-80 lg:max-w-220 text-background">En ISI te ayudamos a valorar tu proyecto. Solicita tu presupuesto gratis y sin compromiso.</h2>
                 <div className={"flex lg:gap-x-10 gap-2"}>
@@ -127,55 +126,68 @@ function Inicio(){
                 </div>
 
             </div>
-            <img className="hidden lg:block w-1/3 h-80 lg:max-w-180 lg:h-160 object-cover mx-auto rounded-3xl" src="/hombre_pintando_color.webp" alt="Hombre Pintando"/>
+            <img className="hidden lg:block w-1/3 h-80 lg:max-w-180 lg:h-160 object-cover rounded-3xl " src="/hombre_pintando_color.webp" alt="Hombre Pintando"/>
 
         </section>
     )
 }
 function Nosotros(){
     return (
-        <section className="mt-4 flex flex-col pb-10 lg:flex lg:flex-row lg:w-[95%] lg:mx-auto lg:mb-20 justify-center items-center ">
-            <div className="flex flex-col justify-center items-center w-full mb-4">
-                <h1 className="text-3xl font-bold ml-4 text-center lg:text-6xl">Sobre nosotros</h1>
-                <div className="h-1 w-60 lg:w-140 bg-secundary mx-auto lg:mt-2 lg:mb-10"></div>
-                <img src="/reformas.webp" className="hidden lg:block w-220 rounded-2xl" alt="Personas haciendo reformas"/>
+        <section className="mt-10 flex flex-col pb-10 lg:flex lg:max-w-[95%] lg:mx-auto lg:mb-20 justify-center items-center ">
+            <h1 className="text-3xl font-bold text-center lg:text-6xl underline decoration-secundary lg:mb-15 mb-4">Sobre nosotros</h1>
+            <div className={"flex lg:justify-center lg:items-center w-full max-w-450"}>
+                <div className="flex flex-col justify-center items-center lg:w-full mb-4">
+                    <img src="/reformas.webp" className="hidden lg:block w-220 rounded-2xl" alt="Personas haciendo reformas"/>
+                </div>
+                <h2 className="mx-4 lg:w-300"><span className={"text-secundary font-bold"}>En ISI damos color a tus ideas y vida a tus espacios</span>.
+                    Realizamos trabajos de pintura y reformas para hogares y locales, ofreciendo calidad, confianza y un trato cercano. Escuchamos
+                    tus necesidades, cuidamos cada detalle y te ofrecemos un presupuesto claro y sin compromiso.
+                    <span className={"text-secundary font-bold"}>Tu espacio, nuestra obra.</span></h2>
             </div>
-            <h2 className="mx-4 lg:w-300"><span className={"text-primary font-bold"}>En ISI damos color a tus ideas y vida a tus espacios</span>.
-                Realizamos trabajos de pintura y reformas para hogares y locales, ofreciendo calidad, confianza y un trato cercano. Escuchamos
-                tus necesidades, cuidamos cada detalle y te ofrecemos un presupuesto claro y sin compromiso.
-                    <span className={"text-primary font-bold"}>Tu espacio, nuestra obra.</span></h2>
+
         </section>
     )
 }
 function Elegirnos(){
     return (
-        <section className="mt-4  bg-primary text-background lg:pt-10 py-4 lg:py-8">
-            <h1 className="text-3xl font-bold text-center lg:text-6xl">Cómo trabajamos</h1>
-            <div className="h-1 w-80 lg:w-175 bg-secundary mx-auto lg:mt-5"></div>
-            <div className="lg:flex lg:gap-x-10 lg:justify-center">
-                <div className="flex flex-col items-center justify-center">
-                    <div className="text-center grid grid-cols-2 lg:mb-10 text-lg mt-4 mx-4 gap-y-4 lg:text-3xl lg:justify-center lg:items-center lg:gap-x-20">
-                        <div className="flex flex-col items-center lg:items-start">
-                            <GiTeamIdea className="size-15 lg:size-20 lg:mx-auto fill-background"/>
+        <section className="mt-4 text-primary lg:pt-10 py-4 lg:py-8 pb-10 lg:mb-15">
+            <h1 className=" font-bold text-center underline decoration-secundary lg:mb-15">Cómo trabajamos</h1>
+            <div className="lg:flex lg:gap-x-10 lg:justify-center ">
+                <div className="flex flex-col  items-center justify-center lg:mb-10">
+                    <div className="text-center grid grid-cols-2 xl:flex lg:mb-10 text-lg mt-4 mx-4 gap-y-4 lg:text-3xl lg:justify-center lg:items-center lg:gap-x-20">
+                        <div className="flex flex-col items-center lg:items-start lg:w-80">
+                            <GiTeamIdea className="size-10 lg:size-20 lg:mx-auto fill-secundary"/>
                             <h2 className="">1. Hablamos de tu idea</h2>
+                            <p className={"hidden lg:block text-start mt-4"}>Cuéntanos qué tienes en mente, ya sea pintar una habitación, renovar un local o reformar toda la casa. Te escuchamos con calma,
+                                resolvemos tus dudas y entendemos qué necesitas realmente.
+                            </p>
                         </div>
-                        <div className="flex flex-col items-center lg:items-start ">
-                            <PiMathOperationsBold className="size-15 lg:size-20 lg:mx-auto fill-background"/>
+                        <div className="flex flex-col items-center lg:items-start lg:w-80">
+                            <PiMathOperationsBold className="size-10 lg:size-20 lg:mx-auto fill-secundary"/>
                             <h2 className="">2. Te hacemos el presupuesto</h2>
+                            <p className={"hidden lg:block text-start mt-4"}>Visitamos el espacio, valoramos el trabajo y te enviamos un presupuesto claro y detallado, sin letra pequeña ni sorpresas.
+                                Es gratis y sin compromiso, así que decides con total tranquilidad.
+                            </p>
                         </div>
-                        <div className="flex flex-col items-center lg:items-start">
-                            <FaPaintRoller className="size-15 lg:size-20 lg:mx-auto fill-background"/>
+                        <div className="flex flex-col items-center lg:items-start lg:w-80">
+                            <FaPaintRoller className="size-10 lg:size-20 lg:mx-auto fill-secundary"/>
                             <h2 className="">3. Nos ponemos manos a la obra</h2>
+                            <p className={"hidden lg:block text-start mt-4"}>Una vez aprobado, fijamos fechas y empezamos. Protegemos tus muebles y suelos, trabajamos con materiales de calidad y
+                                cuidamos cada detalle, dejando todo limpio y ordenado cada día.
+                            </p>
                         </div>
-                        <div className="flex flex-col items-center lg:items-start">
-                            <FaCheck className="size-15 lg:size-20 lg:mx-auto fill-background"/>
+                        <div className="flex flex-col items-center lg:items-start lg:w-80">
+                            <FaCheck className="size-10 lg:size-20 lg:mx-auto fill-secundary"/>
                             <h2 className="">4. Entrega y garantía</h2>
+                            <p className={"hidden lg:block text-start mt-4"}>Repasamos juntos el resultado para asegurarnos de que todo queda como esperabas. Te entregamos el espacio impecable y respaldamos
+                                nuestro trabajo con garantía, para que sigas contando con nosotros después.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <a href={"tel:+34676055670"} className="bg-background max-w-50 lg:max-w-80 text-center lg:rounded-4xl font-bold rounded-2xl p-4 flex mx-auto mt-4 text-3xl text-primary lg:p-6 lg:text-5xl hover:-translate-y-5 hover:translate-x-5 transition duration-300 ease-in-out hover:shadow-2xl hover:shadow-white/60"
+            <a href={"tel:+34676055670"} className="bg-primary max-w-40 lg:max-w-80 items-center justify-center lg:rounded-4xl font-bold rounded-2xl p-4 flex mx-auto mt-4 text-xl text-background lg:p-6 lg:text-5xl hover:-translate-y-5 hover:translate-x-5 transition duration-300 ease-in-out hover:shadow-2xl hover:shadow-white/60"
             >Empieza ya</a>
         </section>
     )
@@ -227,6 +239,15 @@ function AvisoLegal({setAvisoLegalView}){
         </div>
     )
 }
+function DecorationSection(){
+    return (
+        <div>
+            <div className="h-1 w-70 lg:w-250 bg-primary mx-auto lg:mt-5 lg:mb-10 mb-4"></div>
+            <div className="h-1 w-50 lg:w-150 bg-primary mx-auto lg:mt-5 lg:mb-10 mb-4"></div>
+        </div>
+
+    )
+}
 
 function App() {
     const [servicioActual, setServicioActual] = useState(0);
@@ -240,7 +261,9 @@ function App() {
         <Header />
         <Inicio />
         <Nosotros />
+        <DecorationSection/>
         <Elegirnos />
+        <DecorationSection/>
         <ServiciosView servicioActual={servicioActual} setServicioActual={setServicioActual} />
         <Footer avisoLegal={setAvisoLegalView}/>
     </>
