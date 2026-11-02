@@ -60,14 +60,14 @@ function ServiciosViewCarrusel({servicioActual, setServicioActual})
         <div className="lg:hidden flex flex-col">
             <div className="flex flex-col lg:justify-center lg:gap-x-20 lg:mt-10">
                 <div className="relative flex text-center items-center lg:w-[50%] lg:justify-center z-20">
-                    <button className={`absolute z-30 left-2 bg-black py-3 px-4 rounded-full opacity-70 text-white font-bold ${servicioActual === 0 ? "invisible" : "visible"}`}
+                    <button className={`absolute z-30 left-2 bg-primary py-3 px-4 rounded-full opacity-70 text-white font-bold ${servicioActual === 0 ? "invisible" : "visible"}`}
                             onClick={() => {
                                 if (servicioActual > 0) setServicioActual(servicioActual - 1);
                             }}>
                         <FaArrowRight className="rotate-180"/>
                     </button>
                     <img src={servicios[servicioActual].img} alt={servicios[servicioActual].name} className="contain-content "/>
-                    <button className={`absolute z-30 right-2 bg-black py-3 px-4 rounded-full opacity-70 text-white font-bold ${servicioActual === servicios.length - 1 ? "invisible" : "visible"}`}
+                    <button className={`absolute z-30 right-2 bg-primary py-3 px-4 rounded-full opacity-70 text-white font-bold ${servicioActual === servicios.length - 1 ? "invisible" : "visible"}`}
                             onClick={() => {
                                 if (servicioActual < servicios.length - 1) setServicioActual(servicioActual + 1);
                             }}><FaArrowRight />
@@ -139,7 +139,7 @@ function Nosotros(){
                 <div className="flex flex-col justify-center items-center lg:w-full mb-4">
                     <img src="/reformas.webp" className="hidden lg:block w-220 rounded-2xl" alt="Personas haciendo reformas"/>
                 </div>
-                <h2 className="mx-4 lg:w-300"><span className={"text-secundary font-bold"}>En ISI damos color a tus ideas y vida a tus espacios</span>.
+                <h2 className="mx-4 lg:w-250"><span className={"text-secundary font-bold"}>En ISI damos color a tus ideas y vida a tus espacios</span>.
                     Realizamos trabajos de pintura y reformas para hogares y locales, ofreciendo calidad, confianza y un trato cercano. Escuchamos
                     tus necesidades, cuidamos cada detalle y te ofrecemos un presupuesto claro y sin compromiso.
                     <span className={"text-secundary font-bold"}>Tu espacio, nuestra obra.</span></h2>

@@ -46,9 +46,12 @@ p
 }
 button{
     font-family: "Zen Antique Soft", serif;
+
 }
 a{
     font-family: "Zen Antique Soft", serif;
+    font-weight: bolder;
+    font-size: var(--text-lg) ;
 }
 @media (min-width: 640px) {
     h1
@@ -64,6 +67,9 @@ a{
     p
     {
         font-size: var(--text-base);
+    }
+    a{
+        font-size: var(--text-lg) ;
     }
 }
 
@@ -81,6 +87,9 @@ a{
     p
     {
         font-size: var(--text-lg);
+    }
+    a{
+        font-size: var(--text-2xl) ;
     }
 }
 
