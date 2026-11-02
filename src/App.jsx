@@ -135,45 +135,26 @@ function Inicio(){
 function Nosotros(){
     return (
         <section className="mt-4 flex flex-col pb-10 lg:flex lg:flex-row lg:w-[95%] lg:mx-auto lg:mb-20 justify-center items-center ">
-            <div className="flex flex-col justify-center items-center w-full mb-10">
+            <div className="flex flex-col justify-center items-center w-full mb-4">
                 <h1 className="text-3xl font-bold ml-4 text-center lg:text-6xl">Sobre nosotros</h1>
                 <div className="h-1 w-60 lg:w-140 bg-secundary mx-auto lg:mt-2 lg:mb-10"></div>
                 <img src="/reformas.webp" className="hidden lg:block w-220 rounded-2xl" alt="Personas haciendo reformas"/>
             </div>
-            <h2 className="mx-4 text-lg lg:text-4xl lg:w-300"><span className="font-bold text-secundary">En ISI damos color a tus ideas.</span> Realizamos trabajos de pintura, reformas y soluciones para hogares y locales, con un trato cercano, calidad garantizada y presupuesto sin compromiso. Tu espacio, nuestra obra.</h2>
+            <h2 className="mx-4 lg:w-300"><span className={"text-primary font-bold"}>En ISI damos color a tus ideas y vida a tus espacios</span>.
+                Realizamos trabajos de pintura y reformas para hogares y locales, ofreciendo calidad, confianza y un trato cercano. Escuchamos
+                tus necesidades, cuidamos cada detalle y te ofrecemos un presupuesto claro y sin compromiso.
+                    <span className={"text-primary font-bold"}>Tu espacio, nuestra obra.</span></h2>
         </section>
     )
 }
 function Elegirnos(){
     return (
         <section className="mt-4  bg-primary text-background lg:pt-10 py-4 lg:py-8">
-            <h1 className="text-3xl font-bold text-center lg:text-6xl">¿Por qué elegirnos?</h1>
+            <h1 className="text-3xl font-bold text-center lg:text-6xl">Cómo trabajamos</h1>
             <div className="h-1 w-80 lg:w-175 bg-secundary mx-auto lg:mt-5"></div>
             <div className="lg:flex lg:gap-x-10 lg:justify-center">
-                <div className="flex justify-center my-auto mb-8 ml-4">
-                    <ul className="list-inside text-lg mt-4 lg:text-4xl lg:ml-5 lg:mt-10 lg:grid lg:grid-cols-2 lg:grid-rows-2 ">
-                        <li className="lg:max-w-130 lg:border-b lg:border-r lg:p-4">
-                            <h2 className="font-bold">Presupuesto sin compromiso</h2>
-                            <p className="text-sm mx-6 mb-2 lg:text-3xl lg:mb-20 wrap-anywhere">Nos cuentas qué necesitas, lo vemos contigo y te damos un precio claro. Si no te encaja, no pasa nada.</p>
-                        </li>
-
-                        <li className={"lg:max-w-130 lg:border-b lg:border-l lg:p-4"}>
-                            <h2 className="font-bold">Trato directo y cercano</h2>
-                            <p className="text-sm mx-6 mb-2 lg:text-3xl lg:mb-20 wrap-anywhere">Hablas con las personas que van a hacer el trabajo, sin intermediarios ni vueltas. Te explicamos todo con palabras normales.</p>
-                        </li>
-                        <li className={"lg:max-w-130 lg:border-b-0 lg:border-t lg:border-r lg:p-4"}>
-                            <h2 className="font-bold">Trabajo bien hecho y con garantía</h2>
-                            <p className="text-sm mx-6 mb-2 lg:text-3xl lg:mb-20 wrap-anywhere">Cuidamos cada detalle y respondemos por lo que hacemos. Si algo no queda como debe, lo arreglamos.</p>
-                        </li>
-                        <li className={"lg:max-w-130 lg:border-l lg:border-t lg:p-4"}>
-                            <h2 className="font-bold">Experiencia y confianza</h2>
-                            <p className="text-sm mx-6 lg:text-3xl lg:mb-20 wrap-anywhere">Sabemos lo que es entrar en tu casa o en tu negocio, y lo tratamos como si fuera nuestro.</p>
-                        </li>
-                    </ul>
-                </div>
-
                 <div className="flex flex-col items-center justify-center">
-                    <div className="lg:flex lg:flex-col text-center grid grid-cols-2  text-lg mt-4 mx-4 gap-y-4 lg:text-3xl lg:justify-center lg:items-center">
+                    <div className="text-center grid grid-cols-2 lg:mb-10 text-lg mt-4 mx-4 gap-y-4 lg:text-3xl lg:justify-center lg:items-center lg:gap-x-20">
                         <div className="flex flex-col items-center lg:items-start">
                             <GiTeamIdea className="size-15 lg:size-20 lg:mx-auto fill-background"/>
                             <h2 className="">1. Hablamos de tu idea</h2>
